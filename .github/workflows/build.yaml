@@ -1,18 +1,20 @@
 name: my first workflow
-on: 
-    push:
+
+on:
+  push:
     branches: [Branch2]
 
 jobs:
-    CICD_Workshop:
+  CICD_Workshop:
     runs-on: ubuntu-latest
     steps:
-    - name: mytest
-    uses: actions/mytest@v2
-    - name: Deploy
-    run: railway up
-    env:
-    RAILWAY_TOKEN: ${{ secrets.BE_STRONG }}
+      - name: mytest
+        uses: actions/mytest@v2
+      - name: Deploy
+        run: railway up
+        env:
+          RAILWAY_TOKEN: ${{ secrets.BE_STRONG }}
+
 {
 	"blocks": [
 		{
@@ -45,7 +47,7 @@ jobs:
 				},
 				{
 					"type": "mrkdwn",
-					"text": "*Repository:*\nhttps://github.com/ChitSuWL/NewTest.git"
+					"text": "*Repository:*\nhttps://github.com/ChitSuWL/ADLC3_workshop"
 				}
 			]
 		},
@@ -53,7 +55,7 @@ jobs:
 			"type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": "<https://divine-hour-production.up.railway.app>"
+				"text": "<https://laughable-collar-production.up.railway.app>"
 			}
 		},
 		{
@@ -69,8 +71,8 @@ jobs:
 					"text": "Go",
 					"emoji": true
 				},
-				"value": "click_me_123",
-				"action_id": "button-action"
+				"url": "https://laughable-collar-production.up.railway.app", 
+        "action_id": "button-action"
 			}
 		}
 	]
