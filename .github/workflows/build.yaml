@@ -8,8 +8,8 @@ jobs:
   CICD_Workshop:
     runs-on: ubuntu-latest
     steps:
-      - name: mytest
-        uses: actions/mytest@v2
+      - name: ADLC3_workshop
+        uses: ChitSuWL/ADLC3_workshop@v2
       - name: Deploy
         run: railway up
         env:
