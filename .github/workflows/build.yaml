@@ -5,6 +5,6 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       -name: Echo current branch
-      run: echo "$(date): Current branch is ${{ github.ref_name }}"
+      run: echo test
 			-name: Checkout source
       uses: actions/checkout@v2
