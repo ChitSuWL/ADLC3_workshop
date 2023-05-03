@@ -72,7 +72,7 @@ jobs:
 					"emoji": true
 				},
 				"url": "https://laughable-collar-production.up.railway.app", 
-				"action_id": "button-action"
+        		"action_id": "button-action"
 			}
 		}
 	]
