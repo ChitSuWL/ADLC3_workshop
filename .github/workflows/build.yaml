@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ADLC3_workshop
-        uses: ChitSuWL/ADLC3_workshop@v1.0
+        uses: ChitSuWL/ADLC3_workshop@v1
       - name: Deploy
         run: railway up
         env:
