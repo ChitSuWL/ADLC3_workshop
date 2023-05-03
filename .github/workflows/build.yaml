@@ -6,3 +6,5 @@ jobs:
       steps:
       -name: Echo current branch
       run: echo "$(date): Current branch is ${{ github.ref_name }}"
+			-name: Checkout source
+      uses: actions/checkout@v2
