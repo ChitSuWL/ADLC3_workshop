@@ -8,7 +8,7 @@ jobs:
   CICD_Workshop:
     runs-on: ubuntu-latest
     steps:
-      - name: ADLC3_workshop
+      - name: ADLC3_workshop@vl
         uses: ChitSuWL/ADLC3_workshop@v1
       - name: Deploy
         run: railway up
