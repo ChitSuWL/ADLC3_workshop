@@ -1,3 +1,20 @@
+name: my first workflow
+
+on:
+  push:
+    branches: [Branch2]
+
+jobs:
+  CICD_Workshop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: mytest
+        uses: actions/mytest@v2
+      - name: Deploy
+        run: railway up
+        env:
+          RAILWAY_TOKEN: ${{ secrets.BE_STRONG }}
+
 {
 	"blocks": [
 		{
@@ -55,7 +72,7 @@
 					"emoji": true
 				},
 				"url": "https://laughable-collar-production.up.railway.app", 
-				"action_id": "button-action"
+        "action_id": "button-action"
 			}
 		}
 	]
