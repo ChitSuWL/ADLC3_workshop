@@ -27,67 +27,66 @@ jobs:
       uses: slackapi/slack-github-action@v1.23.0
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          fields: |
-            {
-              "blocks": [
-                {
-                  "type": "header",
+        fields: |
+          {
+            "blocks": [
+              {
+                "type": "header",
+                "text": {
+                  "type": "plain_text",
+                  "text": "DipSA 56 CI/CD Submission",
+                  "emoji": true
+                }
+              },
+              {
+                "type": "section",
+                "fields": [
+                  {
+                    "type": "mrkdwn",
+                    "text": "*Name: * Chit Su Wai Lin"
+                  },
+                  {
+                    "type": "mrkdwn",
+                    "text": "*Email: * e1114086@u.nus.edu"
+                  }
+                ]
+              },
+              {
+                "type": "section",
+                "fields": [
+                  {
+                    "type": "mrkdwn",
+                    "text": "Matriculation: Axxxxx"
+                  },
+                  {
+                    "type": "mrkdwn",
+                    "text": "Repository:\nhttps://github.com/ChitSuWL/ADLC3_workshop"
+                  }
+                ]
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "<https://laughable-collar-production.up.railway.app>"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": " "
+                },
+                "accessory": {
+                  "type": "button",
                   "text": {
                     "type": "plain_text",
-                    "text": "DipSA 56 CI/CD Submission",
+                    "text": "Go",
                     "emoji": true
-                  }
-                },
-                {
-                  "type": "section",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Name: * Chit Su Wai Lin"
-                    },
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Email: * e1114086@u.nus.edu"
-                    }
-                  ]
-                },
-                {
-                  "type": "section",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "Matriculation: Axxxxx"
-                    },
-                    {
-                      "type": "mrkdwn",
-                      "text": "Repository:\nhttps://github.com/ChitSuWL/ADLC3_workshop"
-                    }
-                  ]
-                },
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "<https://laughable-collar-production.up.railway.app>"
-                  }
-                },
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": " "
                   },
-                  "accessory": {
-                    "type": "button",
-                    "text": {
-                      "type": "plain_text",
-                      "text": "Go",
-                      "emoji": true
-                    },
-                    "url": "https://laughable-collar-production.up.railway.app",
-                    "action_id": "button-action"
-                  }
+                  "url": "https://laughable-collar-production.up.railway.app",
+                  "action_id": "button-action"
                 }
-              ]
-            }
-         
+              }
+            ]
+          }
