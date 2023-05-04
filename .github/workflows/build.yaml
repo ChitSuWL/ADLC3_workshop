@@ -5,24 +5,28 @@ on:
     branches: [Branch2]
 
 jobs:
-  CICD_Workshop:
+  checkout:
     runs-on: ubuntu-latest
     steps:
-      - name: ADLC3_workshop
-        uses: ChitSuWL/ADLC3_workshop@v1
-      - name: Deploy
-        run: railway up
-        env:
-          RAILWAY_TOKEN: ${{ secrets.BE_STRONG }}
+    - name: Checkout source
+      uses: actions/checkout@v3
 
-  send_submission:
-    needs: CICD_Workshop
+  Deploy to Railway:
     runs-on: ubuntu-latest
     steps:
-      - name: Submit via Slack
-        uses: slackapi/slack-github-action@v3.5.1
-        with:
-          status_text: "New submission available"
+    - name: Deploy
+      run: railway up
+      env:
+        RAILWAY_TOKEN: ${{ secrets.BE_STRONG }}
+
+  send_notification:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send GitHub Action trigger data to Slack workflow
+      id: slack
+      uses: slackapi/slack-github-action@v1.23.0
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           fields: |
             {
               "blocks": [
@@ -86,5 +90,4 @@ jobs:
                 }
               ]
             }
-          channel_id: "https://app.slack.com/client/T0557SC1562/C0557SC27E2"
-          github_token: ${{ secrets.BE_STRONG}}
+         
