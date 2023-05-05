@@ -21,9 +21,9 @@ jobs:
     - name: Send GitHub Action trigger data to Slack workflow
       id: slack
       uses: slackapi/slack-github-action@v1.23.0
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        fields: |
+      with:
+        payload: |
+          payload: |
           {
             "blocks": [
               {
@@ -86,3 +86,6 @@ jobs:
               }
             ]
           }
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        
