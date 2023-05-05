@@ -88,5 +88,4 @@ jobs:
           }
       env:
         SLACK_WEBHOOK: ${{secrets.SLACK_WEBHOOK}}
-        SLACK_WEBHOOK_TYPE : INCOMING_WEBHOOK
         
