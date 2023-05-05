@@ -56,7 +56,7 @@ jobs:
                   },
                   {
                     "type": "mrkdwn",
-                    "text": "Repository:\n https://github.com/ChitSuWL/ADLC3_workshop"
+                    "text": "Repository:\n github.event.repository.html_url"
                   }
                 ]
               },
@@ -64,7 +64,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "<https://laughable-collar-production.up.railway.app>"
+                  "text": "https://${{vars.VAR_RAILWAY_URL}}.up.railway.app"
                 }
               },
               {
@@ -81,7 +81,7 @@ jobs:
                     "emoji": true
                   },
                   "value": "click_me_123",
-                  "url": "https://laughable-collar-production.up.railway.app",
+                  "url": "https://${{vars.VAR_RAILWAY_URL}}.up.railway.app",
                   "action_id": "button-action"
                 }
               }
