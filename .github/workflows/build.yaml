@@ -4,10 +4,10 @@ on:
   push:
     branches: ['release/v[1-9]+.[0-9]+']
 
-#just comment
 jobs:
   checkout:
     runs-on: ubuntu-latest
+    if: startsWith(github.event.head_commit.message,'#NORUN') != true
     steps:
     - name: Checkout source
       uses: actions/checkout@v3
