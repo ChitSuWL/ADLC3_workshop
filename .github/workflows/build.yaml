@@ -81,7 +81,7 @@ jobs:
                     "emoji": true
                   },
                   "value": "click_me_123",
-                  "url": "https://app.slack.com/client/T054JE2KFTM/C05552HCNRY",
+                  "url": "https://laughable-collar-production.up.railway.app",
                   "action_id": "button-action"
                 }
               }
