@@ -2,7 +2,7 @@ name: my first workflow
 
 on:
   push:
-    branches: [Branch2]
+    branches: ['release/v[1-9]+.[0-9]+']
 
 #just comment
 jobs:
@@ -52,7 +52,7 @@ jobs:
                 "fields": [
                   {
                     "type": "mrkdwn",
-                    "text": "Matriculation: Axxxxx"
+                    "text": "Matriculation: A0269747H"
                   },
                   {
                     "type": "mrkdwn",
