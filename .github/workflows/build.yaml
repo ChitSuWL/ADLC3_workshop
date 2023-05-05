@@ -56,7 +56,7 @@ jobs:
                   },
                   {
                     "type": "mrkdwn",
-                    "text": "Repository:\n repo name"
+                    "text": "Repository:\n https://github.com/ChitSuWL/ADLC3_workshop"
                   }
                 ]
               },
