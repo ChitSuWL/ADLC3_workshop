@@ -11,6 +11,8 @@ jobs:
     - name: Checkout source
       uses: actions/checkout@v3
 
+    - name: Setup Railway CLI
+      uses: MadeByThePinsHub/setup-railway-cli-action@v0.1.0
     - name: Deploy
       run: railway up
       env:
