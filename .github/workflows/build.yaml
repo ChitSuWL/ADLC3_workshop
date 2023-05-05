@@ -19,7 +19,7 @@ jobs:
       env:
         RAILWAY_TOKEN: ${{ secrets.BE_STRONG }}
 
-    - name: Send GitHub Action trigger data to Slack workflow
+    - name: Send data to Slack workflow
       id: slack
       uses: slackapi/slack-github-action@v1.23.0
       with:
@@ -87,6 +87,6 @@ jobs:
             ]
           }
       env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_WEBHOOK: ${{secrets.SLACK_WEBHOOK}}
         SLACK_WEBHOOK_TYPE : INCOMING_WEBHOOK
         
