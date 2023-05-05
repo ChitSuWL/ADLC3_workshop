@@ -77,7 +77,7 @@ jobs:
                   "type": "button",
                   "text": {
                     "type": "plain_text",
-                    "text": "go",
+                    "text": "Go",
                     "emoji": true
                   },
                   "value": "click_me_123",
