@@ -11,19 +11,11 @@ jobs:
     - name: Checkout source
       uses: actions/checkout@v3
 
-jobs:
-  Deploy to Railway:
-    runs-on: ubuntu-latest
-    steps:
     - name: Deploy
       run: railway up
       env:
         RAILWAY_TOKEN: ${{ secrets.BE_STRONG }}
 
-jobs:
-  send_notification:
-    runs-on: ubuntu-latest
-    steps:
     - name: Send GitHub Action trigger data to Slack workflow
       id: slack
       uses: slackapi/slack-github-action@v1.23.0
@@ -62,7 +54,7 @@ jobs:
                   },
                   {
                     "type": "mrkdwn",
-                    "text": "Repository:\nhttps://github.com/ChitSuWL/ADLC3_workshop"
+                    "text": "Repository:\n repo name"
                   }
                 ]
               },
